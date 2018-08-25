@@ -1,0 +1,78 @@
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{multicol,lipsum}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
+
+
+\title{ Week 1 Journal
+{}
+}
+
+\author{\IEEEauthorblockN{Arijet Sarker}
+\IEEEauthorblockA{\textit{UCCS} \\
+asarker@uccs.com}
+}
+
+\maketitle
+
+
+\section{First Section}
+I am Arijet Sarker. I am doing my Ph.D. in Computer Security in University of Colorado Colorado Springs. I am also working as a Research Assistant here. My primary research interest lies in Blockchain related security, Bitcoin, Ethereum and Wireless Sensor Networking. I have completed my B.Sc and M.Sc in Information Technology from Jahangirnagar University, Bangladesh. After that, I worked as a lecturer at a private university in Bangladesh.  \\
+The reason for me to take “Computer Science Research” course is to be familiar with the systemic approach of conducting research. One of the most important parts of research is to grab the information of the existing research papers quickly and effectively. I think this course will help me to learn that. Though generating meaningful results from the experiment is the most important part of the research, but without presenting them in an efficient way is less fruitful. More importantly, it requires to satisfy the requirements of experienced reviewers to publish papers in the top journals. Therefore, presentation of work in the paper is very significant. I hope to be adept at writing and presentation skills after the completion of this course. In summary, I expect this course as a stepping stone for my future research.   
+
+\begin{figure}[h]
+\includegraphics[width=3cm,height=4cm]{photo1}
+\centering
+\caption{Photo}
+\label{fig:photo}
+\end{figure}
+
+
+\section{Second Section}
+The link of git repo is here \href{https://github.com/ArijetSarkerm/latexpaperwriting}{link to git repo}  
+
+I have used the following tools so far:
+\begin{itemize}
+\item Netbeans IDE
+\item DEV C++
+\item Oracle Database
+\item ModelSim
+\item Altera Quartus
+\item Packet Tracer
+\item Matlab
+\item Adobe Illustrator
+\item PyDev
+
+\end{itemize}
+
+I have learned the basic coding of writing paper in latex. I had few problems with coding syntax, specially for reference section. But, it was really great that I have found the solution of almost same problems only googling it.   
+
+
+
+\section{Third Section}
+My current research is on the security of mining pools in the Bitcoin system. Miners get reward by solving cryptographic puzzles (mining) in decentralized cryptocurrency system such as Bitcoin. But, the problem with this approach is the high variance of reward for solo miners. Hence, the miners, forming mining pools participate in the mining process to earn more stable reward over time. The reward earned by a mining pool is shared among the participating miners according to their contribution to the pool. In \cite{rosenfeld2011analysis} several reward systems are described to distribute the reward among the miners in the mining pool.It is shown in \cite{schrijvers2016incentive} that the reward function pay-per-last-N-shares is incentive compatible for miners in the mining pool. But, a number of attacks in the pool make this honest mining less profitable. In Block Withholding (BWH) attack, the attacker joins the victim pool and gets a portion of the pool’s reward unfairly by only pretending to contribute to the victim pool.A special reward is proposed in \cite{bag2016yet} and a cryptographic commitment schemes is proposed in \cite{bag2017bitcoin} to counter BWH attack. The Fork After Withholding (FAW) attack is an extension of the BWH attack. In this case, the attacker gets an additional reward by generating intentional fork only when external miners propagate valid blocks. The FAW attacker earns equal to or greater than a BWH attacker. The reward for the attacker in this case according to \cite{kwon2017selfish} is:
+\begin{equation} \label{eq:1}
+R_{FAW}=\frac{\alpha  (1-\tau )}{1-\alpha  \tau }+\frac{(\alpha  \tau ) \left(\frac{\beta }{1-\alpha  \tau }+\frac{\alpha  c \tau  (-\alpha -\beta +1)}{1-\alpha  \tau }\right)}{\alpha  \tau +\beta }
+\end{equation}
+Here, \\
+$\alpha$ =Computational power of the attacker \\
+$\beta$ = Computational power of the victim pool \\
+$\tau$ = Attacker’s infiltration mining power as a proportion of $\alpha$ \\
+c = Probability that an attacker’s block through infiltration mining will be selected as main chain 
+
+In FAW, A miner is capable of partitioning his computational power in honest mining and infiltration mining. The aggregate income is shown in the equation \ref{eq:1}.  
+In our paper, a reward system, called Anti-Withholding Reward System (AWRS) is proposed to mitigate the effect of FAW attack as well as BWH attack in the mining pool. The proposed AWRS is designed in such a way that it will discourage the attacker to launch the FAW attack and encourage honest mining. AWRS provides additional incentives to the block submitter by introducing asymmetry between block and shares in the rewards. According to our analyses, AWRS completely disincentives FAW attack and makes the optimal attacker behavior to become honest mining regardless of the attacker's computational power capability.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\end{document}
